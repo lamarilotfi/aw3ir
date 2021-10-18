@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>TP2</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="formulaire.js"></script>
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <style>
+          body{
+              background-color: #e9ebee;              
+              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+              font-size: 16px;
+              margin: 0 auto;
+              max-width: 800px;              
+          }
+
+          .error {
+            background-color:rose;   
+          }
+          .resultat{
+            background-color: vert; 
+          }
+
+        </style>
+        
+        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+        <!--<link rel="stylesheet" href="style.css">-->
+        <!--<script src="js/main.js"></script>-->
+    </head>
+    <body>        
+        <h1>tp2</h1>
+        <form >
+                  
+                  <label for="Nom">Nom:</label><br>
+                  <input type="text" id="Nom" name="Nom"><br>
+                   
+                   <label for="Prenom">Prenom:</label><br>
+                   <input type="text" id="Prenom" name="Prenom"><br>
+                   
+                    <label for="Adresse">Adresse:</label><br>
+                   <input type="text" id="Adresse" name="Adresse"><br>
+                   
+                   <label for="mail">Mail:</label><br>
+                   <input type="text" id="mail" name="mail"><br>
+                   
+                    <label for="date">Date:</label><br>
+                   <input type="date" id="date" name="date"><br>
+              
+                   <input type="button" value="Valider" onclick="validation();"/>
+                 </form>
+                 <div class="error" id="error">  
+                  
+                 </div> 
+                 <div class="resultat" id="resultat"> 
+
+                 </div> 
+       
+    </body>
+</html>
