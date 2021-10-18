@@ -7,53 +7,49 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="formulaire.js"></script>
-
+        <link rel="stylesheet" href="css.css" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-      
-          .error {
-            background-color:#FF69B4;   
-          }
-          .resultat{
-            background-color: #7CFC00; 
-          }
        
-        </style>
-        
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="js/main.js"></script>-->
     </head>
     <body>        
-        <h1>tp2</h1>
+        <h2>Saisie d'une fiche "Personne"</h2>
+        <table style="width:100%" border="1">
         <form >
-                  
-                  <label for="Nom">Nom:</label><br>
-                  <input type="text" id="n" name="Nom"><br>
-                  
-                   <label for="Prenom">Prenom:</label><br>
-                   <input type="text" id="Pre" name="Prenom"><br>
-                   
-                    <label for="Adresse">Adresse:</label><br>
-                   <input type="text" id="Adr" name="Adresse"><br>
-                   
-                   <label for="mail">Mail:</label><br>
-                   <input type="text" id="m" name="mail"><br>
-                   
-                    <label for="date">Date:</label><br>
-                   <input type="date" id="d" name="date"><br>
-              
-                   <input type="button" value="Valider" onclick="validation();"/>
+                 <tr>
+                 <th><label for="Nom">Nom:</label><br></th> 
+                 <td><input type="text" id="n" name="Nom"><br></td> 
+                </th> 
+
+                <tr>
+                  <th> <label for="Prenom">Prenom:</label><br></th> 
+                  <td> <input type="text" id="Pre" name="Prenom"><br></td> 
+                 </th> 
+
+                 <tr>
+                  <th>  <label for="Adresse">Adresse:</label><br></th> 
+                  <td> <input type="text" id="Adr" name="Adresse"><br></td> 
+                 </th> 
+
+                 <tr>
+                  <th>   <label for="mail">Mail:</label><br></th> 
+                  <td> <input type="text" id="m" name="mail"><br></td> 
+                 </th> 
+                 
+                 <tr>
+                  <th>  <label for="date">Date:</label><br></th> 
+                  <td><input type="date" id="d" name="date"><br></td> 
+                 </th> 
+               
                  </form>
+                </table>
+                <input type="button" value="Valider" onclick="validation();"/>
+
+
                  <div class="error" id="error">  
                  
                  </div> 
