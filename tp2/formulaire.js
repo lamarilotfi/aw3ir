@@ -43,9 +43,15 @@ if(!re.test(String(mail).toLowerCase())){
 }else {
     i=i+1;
 }
+if( !date.replace(/\s+/, '').length ){
+    document.getElementById("error").innerHTML += "Date incorrect " ;
+}else
+{
+    i=i+1;
+}
 
-if(i ==4 ){
-    document.getElementById("resultat").innerHTML = "Bienvenue " + nom;
+if(i == 5 ){
+    document.getElementById("resultat").innerHTML += "Bienvenue " + nom;
 }
    
  
