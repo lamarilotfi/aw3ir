@@ -2,82 +2,83 @@
 <html>
 
 <head>
-    <!-- CSS boostrap -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/form-validation.js"></script>
+  <!-- CSS boostrap -->
+  <link rel="stylesheet" href="css/bootstrap.css">
 
-    <!-- librairie Javascript de boostrap pour pouvoir utiliser les composants interactifs (modal https://getbootstrap.com/docs/5.1/components/modal/ , collapse...) -->
-    <script src="js/bootstrap.bundle.js"></script>
+  <!-- librairie Javascript de boostrap pour pouvoir utiliser les composants interactifs (modal https://getbootstrap.com/docs/5.1/components/modal/ , collapse...) -->
+  <script src="js/bootstrap.bundle.js"></script>
 
 
 
 
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TP3</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>TP3</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-    <style>
-        body {
-            background-color: #e9ebee;
-            font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-            font-size: 16px;
-            margin: 0 auto;
-            max-width: 800px;
-         
-        }
-    </style>
+  <style>
+    body {
+      background-color: #e9ebee;
+      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+      font-size: 16px;
+      margin: 0 auto;
+      max-width: 800px;
 
-    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-    <!--<link rel="stylesheet" href="style.css">-->
-    <!--<script src="main.js"></script>-->
+    }
+  </style>
+
+  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+  <!--<link rel="stylesheet" href="style.css">-->
+  <!--<script src="main.js"></script>-->
 </head>
 
 <body>
-    <h1>tp3</h1>
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-    <img src="../galilee.png" alt="Logo Galilee" />
+  <h1>tp3</h1>
+  <!-- Add your site or application content here -->
+  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <img src="../galilee.png" alt="Logo Galilee" />
 
-    <div class="container">
-        <h1>Formulaires</h1>
-        <div class="row g-3">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-            </div>
-          </div>   
-          <form class="row g-3">
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-              </div>
-            
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail4">
-            </div>
-            <div class="col-md-6">
-             <label for="date">Date</label> 
-             <input type="date" class="form-control" id="date" >
-            </div>
-             
-           
-        
-        
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">Sign in</button>
-            </div>
-          </form>      
-                
-                
-                
+  <div class="container">
+    <h1>Formulaires</h1>
+    <div class="row g-3">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="fname">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="lname">
+      </div>
     </div>
+    <form class="row g-3">
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+
+      <div class="col-13">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" name="email">
+      </div>
+      <div class="col-14">
+        <label for="date">Date</label>
+        <input type="date" class="form-control" name="date">
+      </div>
+
+
+
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </form>
+
+
+
+  </div>
 </body>
 
 </html>
