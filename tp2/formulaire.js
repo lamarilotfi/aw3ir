@@ -53,6 +53,6 @@ if( !date.replace(/\s+/, '').length ){
 if(i == 5 ){
     document.getElementById("resultat").innerHTML += "Bienvenue " + nom;
 }
-   
+
  
-}
+};

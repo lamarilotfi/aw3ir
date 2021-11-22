@@ -1,10 +1,73 @@
+
 window.onload = function () {   // ce code est exécuter une fois que toute la page est téléchargée par le navigateur
     // voir plus : https://www.w3schools.com/js/js_htmldom.asp
-     console.log( "DOM ready!" );
-     
-     // Y mettre le code Javascript pour valider tous les champs du formulaire
-     document.querySelector("form").addEventListener("submit", function (event) {
+    console.log("DOM ready!");
+
+    document.querySelector("form").addEventListener("submit", function (event) {
         event.preventDefault();
+
+
+        var nom = document.getElementById("fname").value;
+        var prenom = document.getElementById("lname").value;
+        var Adresse = document.getElementById("inputAddress").value;
+        var mail = document.getElementById("inputEmail4").value;
+        var date = document.getElementById("inputl4").value;
+        var i = 0;
+        var ToDate = Date.now;
+
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!nom.replace(/\s+/, '').length) {
+            document.getElementById("error").innerHTML += "La saisie du nom est obligatoire </br>";
+        } else if (nom.length > 30 || nom.length < 5) {
+            document.getElementById("error").innerHTML += "Le nom est incorrect </br>";
+        } else {
+            i = i + 1;
+        }
+        if (!prenom.replace(/\s+/, '').length) {
+            document.getElementById("error").innerHTML += "La saisie du prenom est obligatoire </br>";
+        } else if (prenom.length > 30 || prenom.length < 5) {
+            document.getElementById("error").innerHTML += "Le prenom est incorrect </br>";
+        } else {
+            i = i + 1;
+        }
+        if (!Adresse.replace(/\s+/, '').length) {
+            document.getElementById("error").innerHTML += "La saisie de l'Adresse est obligatoire </br>";
+        } else if (Adresse.length > 50 || Adresse.length < 5) {
+            document.getElementById("error").innerHTML += "L'Adresse est incorrect </br>";
+        } else {
+            i = i + 1;
+        }
+
+
+        if (!re.test(String(mail).toLowerCase())) {
+            document.getElementById("error").innerHTML += "Email incorrect </br>";
+
+        } else {
+            i = i + 1;
+        }
+        if (!date.replace(/\s+/, '').length) {
+            document.getElementById("error").innerHTML += "Date incorrect </br>";
+        } else {
+            i = i + 1;
+        }
+        if (date > ToDate) {
+            document.getElementById("error").innerHTML += "date dans le futur </br>";
+        }
+        else {
+            i = i + 1;
+        }
+        if (i == 6) {
+            document.getElementById("resultat").innerHTML += "Bienvenue " + nom;
+        }
+
         console.log("form submitted!");
-      });
- };
+        console.log(date);
+        console.log(ToDate);
+        var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+        myModal.show();
+    });
+
+
+
+};
+
