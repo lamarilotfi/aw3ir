@@ -6,14 +6,21 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
     document.querySelector("form").addEventListener("submit", function (event) {
         event.preventDefault();
 
-
+        document.getElementById("error").innerHTML ="";
+        document.getElementById("title").innerHTML ="";
+        
         var nom = document.getElementById("fname").value;
         var prenom = document.getElementById("lname").value;
         var Adresse = document.getElementById("inputAddress").value;
         var mail = document.getElementById("inputEmail4").value;
-        var date = document.getElementById("inputl4").value;
+        let date = document.getElementById("inputl4").value;
+        var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+       
+
+        
         var i = 0;
-        var ToDate = Date.now;
+        let nowTimestamp = Date.now();
+        let time =Date.parse(date);
 
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (!nom.replace(/\s+/, '').length) {
@@ -50,21 +57,34 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
         } else {
             i = i + 1;
         }
-        if (date > ToDate) {
+
+        if (time > nowTimestamp) {
             document.getElementById("error").innerHTML += "date dans le futur </br>";
         }
         else {
             i = i + 1;
         }
         if (i == 6) {
-            document.getElementById("resultat").innerHTML += "Bienvenue " + nom;
+            document.getElementById("title").innerHTML += "Bienvenue " + nom;
+            document.getElementById("error").innerHTML +="vous etes ne le "+date +" et vous habitez";
+            document.getElementById("error").innerHTML +="<a href=http://maps.google.com/maps?q=Paris><img width=450 src=https://maps.googleapis.com/maps/api/staticmap?markers=Paris&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg /> </a>";
+           
+
+
+            myModal.show();
+        }
+        else{
+            document.getElementById("title").innerHTML +="Erreur dans le formulaire";
+           myModal.show();
         }
 
+        
         console.log("form submitted!");
-        console.log(date);
-        console.log(ToDate);
-        var myModal = new bootstrap.Modal(document.getElementById('myModal'));
-        myModal.show();
+        console.log();
+       
+        
+        
+        
     });
 
 

@@ -64,8 +64,8 @@
         <input type="email" class="form-control" id="inputEmail4">
       </div>
       <div class="col-14">
-        <label for="date">Date</label>
-        <input type="date" class="form-control" id="inputl4">
+        <label for="date"  class="form-label">Date</label>
+        <input type="date" class="form-control" id="inputl4" max=Date.now()>
       </div>
 
 
@@ -76,17 +76,32 @@
       </div>
     </form>
 
-    
 
-  </div>
-  <div class="error" id="error">
-
-  </div>
-  <div class="resultat" id="resultat">
 
   </div>
 
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><div class="error" id="title"></div></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
 
+        
+        <div class="modal-content" id="error">
+        </div>
+        
+        
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+
+      </div>
+    </div>
+  </div>
+ 
+
+
+  </div>
 </body>
 
 </html>
