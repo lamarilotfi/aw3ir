@@ -13,6 +13,7 @@ var Adresse =document.getElementById("Adr").value;
 var mail =document.getElementById("m").value;
 var date =document.getElementById("d").value;
 var i=0;
+
 const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
  if( !nom.replace(/\s+/, '').length ){
     document.getElementById("error").innerHTML +="La saisie du nom est obligatoire </br>" ;
