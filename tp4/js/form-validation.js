@@ -15,8 +15,8 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
         var mail = document.getElementById("mail").value;
         let date = document.getElementById("birth").value;
         var myModal = new bootstrap.Modal(document.getElementById('myModal'));
-       
-
+      
+        var a=0;
         
         var i = 0;
         let nowTimestamp = Date.now();
@@ -66,8 +66,13 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
         }
         if (i == 6) {
            
-            document.getElementById("error").innerHTML +="vous etes ne le "+date +" merci";
+            document.getElementById("error").innerHTML +=" merci";
            
+           contactStore.add(nom, prenom, date, Adresse, mail);
+
+
+           document.querySelector("table tbody").innerHTML = document.querySelector("table tbody").innerHTML + 
+           '<tr><td>'+nom+'</td><td>'+prenom+'</td><td>'+date+'</td><td>'+Adresse+'</td><td>'+mail+'</td><td>';
            
 
 
@@ -85,6 +90,18 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
     });
 
 
+    $(document).ready(function(){
+        $("#name").keyup(function () {
+            var lengthCount = this.value.length;              
+            $('#span1').text(lengthCount+' car.');
+        });
+        $("#firstname").keyup(function () {
+            var lengthCount = this.value.length;              
+            $('#span2').text(lengthCount+' car.');
+        });
+    
+       
+    });
 
 };
 
