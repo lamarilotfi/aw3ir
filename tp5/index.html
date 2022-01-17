@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         
-        <link rel="stylesheet" href="css/weather-icons.min.css">
+        <link rel="stylesheet" href="css/weather-icons.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="js/bootstrap.min.js"></script>
         <script src="js/vue.js"></script>
@@ -80,8 +80,8 @@
         <div class="card-header">
             {{cityWeather.name}} 
         </div>
-        <img class="card-img-top" v-bind:src="'https://maps.googleapis.com/maps/api/staticmap?markers='+cityWeather.coord.lat+','+cityWeather.coord.lon+'&zoom=5&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg'" alt="Card image cap">
-         alt="Card image cap">
+        <img class="card-img-top" v-bind:src="'https://maps.googleapis.com/maps/api/staticmap?markers='+cityWeather.coord.lat+','+cityWeather.coord.lon+'&zoom=5&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg'"  alt="Card image cap">
+         
 
         <div class="card-body">
             <h5 class="card-title">
